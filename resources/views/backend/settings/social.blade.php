@@ -26,7 +26,7 @@
 	</div>
 	<div class="main-wrap">
 		<div class="card-box">
-			<form action="" method="">
+			<form action="" >
 		      	<div class="row">
 			        <div class="input-field col s12">
 			          <input id="youtube" type="text" class="validate">
