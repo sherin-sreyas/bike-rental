@@ -13,10 +13,7 @@
 @endsection
 
 <!-- Content -->
-@section('content')	
-   <div class="page">
-   		<h2>{{$page_heading}}</h2>
-   </div>    
+@section('content')	 
    <div class="main-wrap">
 		<div class="main-title">
 			<ul class="breadcrumb inline-menu">
@@ -78,5 +75,5 @@
 @endsection
 
 @section('page_script')
-dadsad
+
 @endsection

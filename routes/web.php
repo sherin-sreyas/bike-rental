@@ -30,7 +30,8 @@
 */
 //Back End Routes
 Route::group(['prefix'  => '/', 'namespace' => 'BackEnd'], function() {
-	Route::get('/', 'LoginController@index')->name('login');
-	Route::get('/login', 'LoginController@index')->name('login');
+	Route::get('/', 'LoginController@index')->name('admin.login');
+	Route::get('/login', 'LoginController@index')->name('admin.login');
+	Route::get('/settings/{type}', 'SettingsController@index')->name('admin.settings');
 });
 

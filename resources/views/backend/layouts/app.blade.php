@@ -12,11 +12,20 @@
 <body>
   
   @section('side_navigation')
-    <div class="side-nav">
+    <div class="side-nav ">
       <ul id="main-nav" class="sidenav sidenav-fixed">
         <li class="bold"><a href="#" class="waves-effect waves-teal">Mobile</a></li>
-      </ul>
-    </div>
+        <li class="bold {{ (request()->segment(1) == 'settings') ? 'active' : '' }}">
+            <a href="#" class="waves-effect waves-teal "><i class="material-icons">settings</i>Settings</a>
+          <ul class="">
+            <li class="{{ (request()->segment(1) == 'settings' && request()->segment(2) == 'general') ? 'active' : '' }}"><a href="{{ route('admin.settings', 'general') }}" class="waves-effect waves-teal">General</a></li>
+            <li class="{{ (request()->segment(1) == 'settings' && request()->segment(2) == 'social') ? 'active' : '' }}"><a href="{{ route('admin.settings', 'social') }}" class="waves-effect waves-teal ">Social Media</a></li>
+            
+          </ul>
+        </li>
+      </ul>      
+    </div>     
+        
   @show
   @section('top_bar')
     <div class="navbar-fixed">
